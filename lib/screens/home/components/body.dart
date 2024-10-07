@@ -5,6 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'header_with_searchbox.dart';
 import 'recommended_plants.dart';
 import 'title_with_more_btn.dart';
+import 'featured_plants.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -25,18 +26,9 @@ class Body extends StatelessWidget {
             title: 'Featured Plants',
             onPressed: () {},
           ),
-          Container(
-            margin: EdgeInsets.only(
-              left: kDefaultPadding,
-              top: kDefaultPadding / 2,
-              bottom: kDefaultPadding / 2,
-            ),
-            width: size.width * 0.8,
-            height: 185,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                image: DecorationImage(
-                    image: AssetImage("assets/images/bottom_img_1.png"))),
+          FeaturedPlants(size: size),
+          SizedBox(
+            height: kDefaultPadding,
           )
         ],
       ),
